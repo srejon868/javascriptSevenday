@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payooo</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <!-- DaisyUI -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@5"
+        rel="stylesheet"
+        type="text/css"
+    >
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finlandica+Text:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            font-family: "Finlandica Text", sans-serif !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-200 mx-auto max-w-md">
+    <section class="w-11/12 mx-auto" id="navbar">
+    <div class="flex pt-10 items-center justify-between">
+
+        <!-- Logo + Balance -->
+        <div class="flex items-center gap-2">
+            <div class="w-[150px] py-6">
+                <img src="../assets/Logo-full.png" alt="">
+            </div>
+
+            <div class="blance">
+                <h1 class="text-xl font-bold text-black">$ <span id="mainbalence">45000</span></h1>
+                <p class="text-sm font-medium text-[#ffff]">Available Balance</p>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div>
+            <button class="btn btn-neutral btn-outline rounded-lg" id="LogoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i> 
+               Log Out
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="w-11/12 mx-auto py-10 pl-3">
+    <h1 class="text-2xl font-bold text-black">Welcome to Payoo</h1>
+    <p class=" pt-3 text-[#080808]">
+        Enjoy easy and convenient financial services with us. Cashout charge is low and 
+    </p>
+</section>
+
+<!-- all-button-section -->
+ <section>
+    <div class="grid grid-cols-3 gap-4 w-11/12 mx-auto">
+
+        <div>
+            <button class="btn flex-col py-12 w-full" id="AddMoneyBtnClick">
+                <img src="../assets/opt-1.png" alt="">
+                <h1>Add Money</h1>
+            </button>
+        </div>
+
+        <div>
+            <button class="btn flex-col py-12 w-full" id="CashOutBtnClick">
+                <img src="../assets/opt-1.png" alt="">
+                <h1>Cashout</h1>
+            </button>
+        </div>
+
+        <div>
+            <button class="btn flex-col py-12 w-full">
+                <img src="../assets/opt-3.png" alt="">
+                <h1>Transfer Money</h1>
+            </button>
+        </div>
+
+        <div>
+            <button class="btn flex-col py-12 w-full">
+                <img src="../assets/opt-4.png" alt="">
+                <h1>Get Bonus</h1>
+            </button>
+        </div>
+
+        <div>
+            <button class="btn flex-col py-12 w-full">
+                <img src="../assets/opt-5.png" alt="">
+                <h1>Pay Bill</h1>
+            </button>
+        </div>
+
+        <div>
+            <button class="btn flex-col py-12 w-full">
+                <img src="../assets/opt-6.png" alt="">
+                <h1>Transactions</h1>
+            </button>
+        </div>
+
+    </div>
+</section>
+<!-- cash-out-section -->
+ <section class="w-11/12 mx-auto" id="hideCashOut">
+  
+        <h1 class="text-xl font-bold text-black pt-5">Cash Out</h1>
+        <!-- cashout-input- -->
+        <div class="card bg-base-100 w-11/12 mx-auto  shadow-xl rounded-2xl mt-6">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label   class="label text-xs text-black font-bold">Agent Number</label>
+          <input type="text" id="CashOUtmobileNum" value="01962747832" class="input rounded-full mx-auto" placeholder="Enter 11 digit number"/>
+          <label   class="label text-xs text-black font-bold">Amount</label>
+          <input type="text" id="CashOutAmount" class="input rounded-full mx-auto" placeholder="Enter amount to withdraw"/>
+          <label  class="label text-xs text-black font-bold" value="1234">4 Digit Pin</label>
+          <input type="password" id="CashOutPinNum" value="1234" class="input rounded-full mx-auto" placeholder="Enter 4 Digit Pin" />
+          <button id="CashOutBtn" class="btn btn-neutral mt-4 bg-[#3B25C1] font-bold text-white rounded-full">Withdraw Money</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+ </section>
+
+
+ <!--AddMOneySection-->
+ <section class="w-11/12 mx-auto py-5" id="AddMoney">
+  
+        <h1 class="text-xl font-bold text-black pt-5">Add Money</h1>
+        <!-- cashout-input- -->
+        <div class="card bg-base-100 w-11/12 mx-auto  shadow-xl rounded-2xl mt-3">
+      <div class="card-body">
+        <fieldset class="fieldset" id="SlectbankVlaue">
+<label   class="label text-xs text-black font-bold">Select A Bank</label>
+   <select class="select" id="selectAnbankAccount">
+  <option  value="Select A Bank">Select A Bank</option>
+  <option value="GramenBank">GramenBank</option>
+  <option value="Bark">Bark</option>
+  <option value="Aogroni bank">Aogroni bank</option>
+</select>
+          <label   class="label text-xs text-black font-bold">Agent Number</label>
+          <input type="text" id="AddMoneyNum" value="01962747832" class="input rounded-full mx-auto" placeholder="Enter 11 digit number"/>
+         
+          <label   class="label text-xs text-black font-bold">Amount</label>
+          <input type="text" id="AddMoneybalance" class="input rounded-full mx-auto" placeholder="Enter amount to withdraw"/>
+         
+          <label  class="label text-xs text-black font-bold" value="1234">4 Digit Pin</label>
+          <input type="password" id="AddMoneyPinNum" value="1234" class="input rounded-full mx-auto" placeholder="Enter 4 Digit Pin" />
+          
+          <button id="AddMoneyBtn" class="btn btn-neutral mt-4 bg-[#3B25C1] font-bold text-white rounded-full">Add Money</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <script src="login.js"></script>
+ <script src="addmoney.js"></script>
+ <script src="mcahine.js"></script>
+ <script src="hide.js"></script>
+</body>
+</html>

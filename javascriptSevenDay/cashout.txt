@@ -1,0 +1,45 @@
+
+
+document.getElementById("loginBtn").addEventListener("click",function(){
+   let number= document.getElementById("inputCashOutNum");
+   let inputCashout = number.value;
+
+   ///console.log(inputCashout);
+
+   if(inputCashout !=11){
+        alert("Inavalid Agent Number");
+        return;
+   }
+
+   let ammountInputValue = document.getElementById("inputCashOutAmmount");
+   let ammountValue = ammountInputValue.value;
+
+   
+   let mainbalance = document.getElementById("mainbalance");
+    let mainbalanceValue = mainbalance.innerText;
+
+  const newbalance = Number(mainbalanceValue) - Number(ammountValue);
+
+
+  let pininput = document.getElementById("PinCashOutInput");
+
+  let pinInputValue = pininput.value;
+  //
+
+         if(newbalance <0){
+            alert("Invalid ammount");
+            return;
+         }
+        
+
+         if(pinInputValue == "1234"){
+                 alert("cashout Successful");
+                 console.log(newbalance);
+                 mainbalance.innerText=newbalance;
+                 
+         }else{
+            alert("invaild pin");
+            return;
+         }
+        
+})
